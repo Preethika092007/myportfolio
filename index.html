@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preethika Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background: #0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* Animated Background */
+    .bg-animation{
+      position:fixed;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      z-index:-1;
+    }
+
+    .bg-animation span{
+      position:absolute;
+      display:block;
+      width:25px;
+      height:25px;
+      background:rgba(255,255,255,0.08);
+      animation:animate 20s linear infinite;
+      bottom:-150px;
+      border-radius:50%;
+    }
+
+    .bg-animation span:nth-child(1){
+      left:10%;
+      width:80px;
+      height:80px;
+      animation-delay:0s;
+    }
+
+    .bg-animation span:nth-child(2){
+      left:30%;
+      width:30px;
+      height:30px;
+      animation-delay:2s;
+      animation-duration:12s;
+    }
+
+    .bg-animation span:nth-child(3){
+      left:50%;
+      width:100px;
+      height:100px;
+      animation-delay:4s;
+    }
+
+    .bg-animation span:nth-child(4){
+      left:70%;
+      width:60px;
+      height:60px;
+      animation-delay:0s;
+      animation-duration:18s;
+    }
+
+    .bg-animation span:nth-child(5){
+      left:90%;
+      width:40px;
+      height:40px;
+      animation-delay:3s;
+    }
+
+    @keyframes animate{
+      0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+      }
+      100%{
+        transform:translateY(-1000px) rotate(720deg);
+        opacity:0;
+      }
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 10%;
+      position:sticky;
+      top:0;
+      background:rgba(15,23,42,0.8);
+      backdrop-filter:blur(10px);
+    }
+
+    header h1{
+      color:#38bdf8;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      flex-direction:column;
+      padding:20px;
+    }
+
+    .hero h2{
+      font-size:55px;
+      margin-bottom:15px;
+      animation:fadeIn 2s ease;
+    }
+
+    .hero span{
+      color:#38bdf8;
+    }
+
+    .hero p{
+      max-width:700px;
+      line-height:1.8;
+      font-size:18px;
+      margin-bottom:30px;
+      animation:fadeIn 3s ease;
+    }
+
+    .btn{
+      padding:14px 35px;
+      background:#38bdf8;
+      color:#0f172a;
+      border:none;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+      animation:fadeIn 4s ease;
+    }
+
+    .btn:hover{
+      transform:scale(1.1);
+      background:white;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:50px;
+      color:#38bdf8;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      padding:30px;
+      border-radius:20px;
+      transition:0.4s;
+      backdrop-filter:blur(10px);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background:#1e293b;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#020617;
+      margin-top:50px;
+    }
+
+    .typing{
+      border-right:3px solid #38bdf8;
+      white-space:nowrap;
+      overflow:hidden;
+      width:0;
+      animation:typing 4s steps(30,end) forwards,
+                blink 0.8s infinite;
+    }
+
+    @keyframes typing{
+      from{width:0}
+      to{width:100%}
+    }
+
+    @keyframes blink{
+      50%{
+        border-color:transparent;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Preethika</h1>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Hello, I'm <span>Preethika</span></h2>
+
+    <p class="typing">
+      AI & Data Science Student | ML Enthusiast | Web Developer
+    </p>
+
+    <br><br>
+
+    <p>
+      Passionate about Artificial Intelligence, Machine Learning,
+      Web Development, and creating innovative projects that solve
+      real-world problems.
+    </p>
+
+    <a href="#" class="btn">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card">
+      <p>
+        I am a passionate AI & Data Science student interested in
+        Machine Learning, Data Engineering, Full Stack Development,
+        and innovative technologies. I enjoy building creative and
+        intelligent applications with modern technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, React</p>
+      </div>
+
+      <div class="card">
+        <h3>Backend</h3>
+        <p>Python, Flask, Node.js</p>
+      </div>
+
+      <div class="card">
+        <h3>Database</h3>
+        <p>MySQL, MongoDB</p>
+      </div>
+
+      <div class="card">
+        <h3>AI/ML</h3>
+        <p>Machine Learning, NLP, Data Analysis</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>AI Smart Water Monitoring Dashboard</h3>
+        <p>
+          Real-time water quality monitoring system with anomaly
+          detection and interactive dashboard.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>SafeRoadAI</h3>
+        <p>
+          Machine Learning project for predicting traffic accident
+          hotspots and improving road safety.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Shoe Store Website</h3>
+        <p>
+          Interactive e-commerce website with games and reward
+          systems for customer engagement.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="card">
+      <p>Email: preethika.s2024aids@sece.ac.in</p>
+      <p>Location: Tamil Nadu, India</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Preethika | Portfolio Website</p>
+  </footer>
+
+</body>
+</html>
